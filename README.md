@@ -6,9 +6,16 @@
 # LICENSE
 EULA
 
-TCP-IP Connection Intrusion in action in action
+Running TCP-IP Connection Intrusion
+- Interface 
 <div align="center">
     <img src="http://oi64.tinypic.com/169rrzn.jpg" width="400px"</img> 
+</div>
+
+TCP-IP Connection Intrusion in action
+-it intercepted HTTP request and execute data using same credentials blidnly
+<div align="center">
+    <img src="http://oi63.tinypic.com/2ic9jxu.jpg" width="400px"</img> 
 </div>
 
 
@@ -16,6 +23,8 @@ TCP-IP Connection Intrusion in action in action
 1. TCP-IP Connection Intruder will intrude any unecrypted protocol in network for switches and hubs and execute 
 data strings in that protocol using same credentials fully blindly, when victim is being authenitcated in that protocol
 section
+2. It is not MAN IN THE MIDDLE ATTACK!
+3. It can perform attack in TELNET / Plain HTTP / FTP hacks fully blindly
 
 # How requests are handled?
 1. Web requests are automatically handled by Perl modules.
