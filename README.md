@@ -36,8 +36,8 @@ EULA
 # Payload
 1. TELNET payload is included, as "haroon:hacker" as user/pass for TELNET sessions
 2. FTP payload can be added as "useradd haroon passwd hacker" 
-3. SMTP payload can be added
-4. HTTP specific payload can be added like increasing something, adding user, doing something cool
+3. SMTP payload can be add
+4. HTTP specific payload can be add like increasing/adding user or doing something cool with specific parameter
 
 # Increasing Payload
 1. Currently, I have injected payload in data section specifically for TELNET sessions running in UNIX platforms
@@ -63,5 +63,6 @@ can catch everything in seconds without alarming any piece of firewall or IDS
 # Requirement
 1. TCP-IP Connection Intruder runs on any *Nix system
 3. TCP-IP Connection Intruder needs Perl
+
 # Contact
 mrharoonawan@gmail.com
