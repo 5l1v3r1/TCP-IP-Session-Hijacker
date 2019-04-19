@@ -13,7 +13,7 @@ EULA
 </div>
 
 # TCP-IP Connection Intruder
-- In action, in this example, I have caught HTTP plain request & executed data payload using victim credentials blindly
+- In action, in this example, I have caught HTTP plain request & executed data payload using target credentials stealthly
 <div align="center">
     <img src="http://oi63.tinypic.com/2ic9jxu.jpg" width="400px"</img> 
 </div>
