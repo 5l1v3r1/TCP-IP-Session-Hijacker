@@ -20,13 +20,12 @@ EULA
 
 
 # What is TCP-IP Connection Intruder?
-1. TCP-IP Connection Intruder will intrude any unecrypted protocol in network for switches and hubs and execute 
-data strings in that protocol using same credentials fully blindly, when victim is being authenitcated in that protocol
-section
+1. It sits in any network for switches and hubs
 2. It is not MAN IN THE MIDDLE ATTACK!
-3. IDS / Firewalls will not be able understand or see it
+3. IDS / Firewalls will not catch or see it!
 4. It can perform attack in TELNET / Plain HTTP / FTP hacks fully blindly
-5. IDS / Firewalls will not be able understand or see it!
+5. It is not DNS or any other spoofing!
+6. It uses TCP-IP sequence magic!
 
 # How requests are handled?
 1. Web requests are automatically handled by Perl modules.
