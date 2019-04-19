@@ -20,7 +20,7 @@ EULA
 
 
 # What is TCP-IP Connection Intruder?
-1. It sits in any network for switches and hubs
+1. It works in NETWORK SWITCHES & HUBS stealthly!
 2. It is not MAN IN THE MIDDLE ATTACK!
 3. IDS / FIREWALLS will not see it!
 4. It is not DNS SPOOFING!
