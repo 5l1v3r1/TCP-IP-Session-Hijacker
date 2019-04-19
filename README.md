@@ -34,6 +34,12 @@ EULA
 1. Web requests are automatically handled by Perl modules.
 
 # Payload
+1. TELNET payload is included, as "haroon:hacker" as user/pass for TELNET sessions
+2. FTP payload can be added as "userad haroon passwd hacker" 
+3. SMTP payload can be added
+4. HTTP specific payload can be added like increasing something, adding user, doing something cool
+
+# Increasing Payload
 1. Currently, I have injected payload in data section specifically for TELNET sessions running in UNIX platforms
 2. When successfully authenitcated as victim, it will automatically add haroon:hacker as user/pass for TELNET sessions
 3. More paylaods for HTTP/ FTP/ POP3/ SMTP/ TELNET, can be added in data inject command section
