@@ -35,7 +35,7 @@ EULA
 
 # Payload
 1. TELNET payload is included, as "haroon:hacker" as user/pass for TELNET sessions
-2. FTP payload can be added as "userad haroon passwd hacker" 
+2. FTP payload can be added as "useradd haroon passwd hacker" 
 3. SMTP payload can be added
 4. HTTP specific payload can be added like increasing something, adding user, doing something cool
 
