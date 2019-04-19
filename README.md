@@ -22,10 +22,13 @@ EULA
 # What is TCP-IP Connection Intruder?
 1. It sits in any network for switches and hubs
 2. It is not MAN IN THE MIDDLE ATTACK!
-3. IDS / Firewalls will not catch or see it!
-4. It can perform attack in TELNET / Plain HTTP / FTP hacks fully blindly
-5. It is not DNS or any other spoofing!
-6. It uses TCP-IP sequence magic!
+3. IDS / FIREWALLS will not see it!
+4. It is not DNS SPOOFING!
+5. It is not ARP or ICMP SPOOFING!
+6. It is not SPOOFING CRAP!
+
+# How it capture requests?
+1. It uses data headers using TCP-IP sequence magic
 
 # How requests are handled?
 1. Web requests are automatically handled by Perl modules.
