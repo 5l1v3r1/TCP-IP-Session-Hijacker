@@ -3,6 +3,7 @@
 # TCP-IP-Connection-Intruder
 1. Advanced TCP-IP connection intruder for any unencrypted protocols and execute data blindly using same credentials
 
+
 # LICENSE
 EULA
 
@@ -24,10 +25,19 @@ TCP-IP Connection Intrusion in action
 data strings in that protocol using same credentials fully blindly, when victim is being authenitcated in that protocol
 section
 2. It is not MAN IN THE MIDDLE ATTACK!
-3. It can perform attack in TELNET / Plain HTTP / FTP hacks fully blindly
+3. IDS / Firewalls will not be able understand or see it
+4. It can perform attack in TELNET / Plain HTTP / FTP hacks fully blindly
+5. IDS / Firewalls will not be able understand or see it!
 
 # How requests are handled?
 1. Web requests are automatically handled by Perl modules.
+
+# Payload
+1. Currently, I have injected payload in data section specifically for TELNET sessions running in UNIX platforms
+2. When successfully authenitcated as victim, it will automatically add haroon:hacker as user/pass for TELNET sessions
+3. More paylaods for HTTP/ FTP/ POP3/ SMTP/ TELNET, can be added in data inject command section
+4. It can hack plain HTTP protocols using in banks or open area, 
+5. It can hack subdomains plain HTTP, be creative! 
 
 # Error Handling Capability
 1. It have built-in capability and I don't think any naive will able to use this software
