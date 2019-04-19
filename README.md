@@ -1,8 +1,7 @@
 # F.A.Q
 
 # TCP-IP-Connection-Intruder
-1. Advanced TCP-IP connection intruder for any unencrypted protocols and execute data blindly using same credentials
-
+1. Advanced TCP-IP connection intruder for any unencrypted protocols and execute data payload blindly using target credentials   
 
 # LICENSE
 EULA
