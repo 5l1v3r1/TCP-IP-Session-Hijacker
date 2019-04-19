@@ -54,8 +54,8 @@ EULA
 information or no information at all without wasting time
 2. It is false negative and false positive free.
 3. It is fully powered by Perl
-5. Secure your network in hub or switche environment, even for unecnrypted protocols and see in action how this software
-can catch everything in seconds without alarming any piece of firewall or IDS
+5. Secure your network switches and hubs and understand how this software can inject anything in seconds without
+alarming any piece of firewall or IDS
 
 # How-to use it?
 1. You should be root in Debian/Kali
