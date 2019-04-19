@@ -53,7 +53,7 @@ EULA
 1. It is fully automatic, it doesn't want user to wait and output false positive information but it fully provide useful 
 information or no information at all without wasting time
 2. It is false negative and false positive free.
-3. It uses fully powered by Perl
+3. It is fully powered by Perl
 5. Secure your network in hub or switche environment, even for unecnrypted protocols and see in action how this software
 can catch everything in seconds without alarming any piece of firewall or IDS
 
