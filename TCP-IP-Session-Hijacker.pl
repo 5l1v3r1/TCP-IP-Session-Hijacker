@@ -36,7 +36,7 @@ die "You need EUID 0 to use this tool!\n\n";
 system ("clear");
 print color('bold red');
 print "\n\n					   	 	    Project";
-print "\n 						  : TCP-IP Connection Intruder :\n\n\n";
+print "\n 						  : TCP-IP-Session-Hijacker :\n\n\n";
 print color('bold yellow');
 print "[ + ] Programmer: 	Haroon Awan\n";
 print "[ + ] License: 		EULA\n";
