@@ -34,6 +34,7 @@ EULA
 This number is used to assure the transmission of packets in a chronological order. It is increased by one with each packet.
 The both sides of the connection wait for an packet with a specified sequence number. The first seq-number for both directions is random.
 2. The server responds with an SYN/ACK packet (ACK-acknowledgment) which contains the seq-number of the client+1 and also a own start seq-number. The client confirm everything with an ACK packet including the seq-number of the server+1, after that the session is established.
+
                 +---+       syn seq=x       +---+
                 | C | ------------------->  | S |
                 | L |                       | E |
@@ -42,7 +43,7 @@ The both sides of the connection wait for an packet with a specified sequence nu
                 | N |                       | E |
                 | T |    ack=y+1 seq=x+1    | R |
                 +---+ --------------------> +---+
-                
+                                
 3. To hijack a session it is required to send a packet with a right seq-number, this is where this tool come to inject payload.
     
 # How requests are handled?
