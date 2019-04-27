@@ -1,18 +1,18 @@
 # F.A.Q
 
-# TCP-IP-Connection-Intruder
-1. Advanced TCP-IP connection session hijacker can intrude into any unencrypted protocols and execute data payload using target credentials stealthly
+# TCP-IP-Session-Hijacker
+1. Advanced TCP-IP session hijacker for any purpose, it can intrude into any unencrypted protocols and execute data payload using target credentials stealthly
 
-# LICENSE
+# Agreement
 EULA
 
-# TCP-IP Connection Intruder
+# TCP-IP-Session-Hijacker
 - Interface 
 <div align="center">
     <img src="http://oi64.tinypic.com/169rrzn.jpg" width="400px"</img> 
 </div>
 
-# TCP-IP Connection Intruder
+# TCP-IP-Session-Hijacker
 - In this example, I have caught HTTP plain request & executed data payload using target credentials stealthly
 <div align="center">
     <img src="http://oi63.tinypic.com/2ic9jxu.jpg" width="400px"</img> 
@@ -44,8 +44,26 @@ The both sides of the connection wait for an packet with a specified sequence nu
                 | T |    ack=y+1 seq=x+1    | R |
                 +---+ --------------------> +---+
                                 
-3. To hijack a session it is required to send a packet with a right seq-number, this is where this tool come to inject payload.
+3. To hijack a session it is required to send a packet with a right seq-number
+
+# TCP-IP Attack Power
+1. This is where this software come to hijack any TCP-IP Session to inject payload full stealthily.
+2. This software use TCP Segments can do multiple things at the same time. Byte stream data provided by applications are sliced into different chunks called segments and are delivered to receiver separately
+3. One single segment carry data along with acknowledgement of another segment. A TCP segment is made of different fields which carry different meanings.
+4. Segment, packets also has its own fields (headers). Packet is nothing but a segment sitting inside. Packet ads its own fields on top of the segment.
+5. The important fields added on top of segments while creating a packet in network layer are mentioned below: 
+    •    Source IP Address
+    •    Destination IP Address
+    •    TTL
+    •    Identification
+    •    Flags
+    •    Checksum
     
+# How is it different from MAN IN THE MIDDLE attack?
+1. ARP uses Frame
+2. Frame is if you want to deliver a message to another machine on a network, it will first search for the physical address of the destination. There is actually something called as ARP, that does the job of translating IP addresses to Physical addresses. ARP(address resolution protocol) is one of the core components in networking.
+
+
 # How requests are handled?
 1. Web requests are automatically handled by Perl modules.
 
