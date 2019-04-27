@@ -1,7 +1,7 @@
 # F.A.Q
 
 # TCP-IP-Connection-Intruder
-1. Advanced TCP-IP connection intruder can intrude into any unencrypted protocols and execute data payload using target credentials stealthly
+1. Advanced TCP-IP connection session hijacker can intrude into any unencrypted protocols and execute data payload using target credentials stealthly
 
 # LICENSE
 EULA
@@ -25,11 +25,26 @@ EULA
 3. IDS / FIREWALLS will not see it!
 4. It is not DNS SPOOFING!
 5. It is not ARP or ICMP SPOOFING!
-6. It is not SPOOFING CRAP!
 
 # How it capture requests?
 1. It uses data headers using TCP-IP sequence magic
 
+# TCP-IP Session Attack Method
+1. At the establishment of a TCP session the client starts by sending a SYN-packet (SYN=synchronize) with an sequence number.
+This number is used to assure the transmission of packets in a chronological order. It is increased by one with each packet.
+The both sides of the connection wait for an packet with a specified sequence number. The first seq-number for both directions is random.
+2. The server responds with an SYN/ACK packet (ACK-acknowledgment) which contains the seq-number of the client+1 and also a own start seq-number. The client confirm everything with an ACK packet including the seq-number of the server+1, after that the session is established.
+                +---+       syn seq=x       +---+
+                | C | ------------------->  | S |
+                | L |                       | E |
+                | I |   syn ack=x+1 seq=y   | R |
+                | E | <-------------------- | V |
+                | N |                       | E |
+                | T |    ack=y+1 seq=x+1    | R |
+                +---+ --------------------> +---+
+                
+3. To hijack a session it is required to send a packet with a right seq-number, this is where this tool come to inject payload.
+    
 # How requests are handled?
 1. Web requests are automatically handled by Perl modules.
 
