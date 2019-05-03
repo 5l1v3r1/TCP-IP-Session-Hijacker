@@ -1,14 +1,7 @@
 # F.A.Q
 
-# Gateway Hack 
-1. ICMP - Victim Host Redirector
-2. You can redirect victim host gateway from old to new to your own
-
 # TCP-IP-Session-Hijacker
 1. Advanced TCP-IP session hijacker for any purpose, it can intrude into any unencrypted protocols and execute data payload using target credentials stealthly
-
-# TCP-IP Connection Reset
-1. A TCP reset kills a TCP-IP connection instantly, when used as designed, this can be a useful
 
 # Agreement
 EULA
@@ -16,26 +9,12 @@ EULA
 # TCP-IP-Session-Hijacker
 - Interface 
 <div align="center">
-    <img src="http://oi65.tinypic.com/2yl2ww8.jpg" width="400px"</img> 
-</div>
-
-# Gateway Hack
-- Interface 
-<div align="center">
-    <img src="http://oi68.tinypic.com/21pm5k.jpg" width="400px"</img> 
-</div>
-
-# Gateway Hack
-- Interface 
-<div align="center">
-    <img src="http://oi63.tinypic.com/n535ms.jpg" width="400px"</img> 
+    <img src="http://oi64.tinypic.com/169rrzn.jpg" width="400px"</img> 
 </div>
 
 
-# What is TCP-IP Connection Intruder & Gateway Hack & TCP-IP Connection Reset?
+# What is TCP-IP Connection Intruder?
 1. It works in NETWORK SWITCHES & HUBS stealthly!
-2. Gateway works in Network Switches and Hubs Sealthly!
-3. TCP reset kills a TCP connection. When used as designed, this can be a useful tool!
 
 
 # TCP-IP Session Attack Method
@@ -71,9 +50,6 @@ The both sides of the connection wait for an packet with a specified sequence nu
 # How is it different from MAN IN THE MIDDLE attack?
 1. ARP uses Frame
 2. Frame is if you want to deliver a message to another machine on a network, it will first search for the physical address of the destination. There is actually something called as ARP, that does the job of translating IP addresses to Physical addresses. ARP(address resolution protocol) is one of the core components in networking.
-
-# ICMP Ridrect Attack Method
-1. Read https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Redirect
 
 
 # How requests are handled?
